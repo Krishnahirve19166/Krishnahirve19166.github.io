@@ -11,7 +11,25 @@ Although you can use them, for a more unique website, replace these images with 
 
 
 <head>
+        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+<script>     
+  var firebaseConfig =
+  {
+   apiKey: "AIzaSyAUi5mUZ_1C-SEddlerdUGV1YKZKazBTnQ",
+   authDomain: "complain2solution-dc004.firebaseapp.com",
+   databaseURL: "https://complain2solution-dc004.firebaseio.com",
+   projectId: "complain2solution-dc004",
+   storageBucket: "complain2solution-dc004.appspot.com",
+   messagingSenderId: "44446720580",
+   appId: "1:44446720580:web:365629f057e26310aa5211",
+   measurementId: "G-74108JL5F4"
+ };
 
+ firebase.initializeApp(firebaseConfig);
+ firebase.analytics();
+ const db = firebase.firestore();
+</script>
 
 
     <meta charset="utf-8">
@@ -76,7 +94,8 @@ Although you can use them, for a more unique website, replace these images with 
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
 
 </head>
 
@@ -128,7 +147,7 @@ Although you can use them, for a more unique website, replace these images with 
 
                     <li class="active">
 
-                        <a href="#">LOGOUT</a>
+                        <a href='https://cnarte.github.io'"> LOGOUT</a>
 
                     </li>
 
@@ -246,13 +265,12 @@ Although you can use them, for a more unique website, replace these images with 
 
                     <h3>water supply:</h3></div>
                     <br/>
-                    <input type="radio" name="problem" />leakage
+                    <input type="radio" ; name="i" value="plumbing" />1 leakage
                     <br/>
-                    <input type="radio" name="problem" />damaged pipes
+                    <input type="radio" ; name="i" value="plumbing" />2 damaged pipes
 
                
-
-            
+                   
 
     
 
@@ -272,9 +290,9 @@ Although you can use them, for a more unique website, replace these images with 
 
                 </div>
                 <br/>
-                <input type="radio" name="problem" id="g1" />garbage disposal in locality
+                <input type="radio" name="i"; value="garbage disposal" />3 garbage disposal in locality
                 <br/>
-                <input type="radio" name="problem" />garbage collection from society dustbin
+                <input type="radio" name="i"; value="garbage disposal" />4 garbage collection from society dustbin
 
                <br/>
                <br/>
@@ -296,11 +314,17 @@ Although you can use them, for a more unique website, replace these images with 
 
 			
 
-                    <a href="#" class="btn btn-primary btn-lg">SUBMIT</a>               
+                    <button type="button" onclick="displayRadioValue()">
+                    submit</button>button></button>               
 
             </div>
 
         </div>
+        <script> 
+                function displayRadioValue() { 
+                    var ele = document.getElementsByName('i'); 
+
+                    </script>
 
     </section>
 </form>
@@ -368,8 +392,14 @@ Although you can use them, for a more unique website, replace these images with 
 
     <!-- Custom Javascript -->
 
-    <script src="js/custom.js"></script>
 
+ 
+
+
+<script src="js/custom.js"></script>
+    <script src="userpage.js"></script>
+
+db.collection
 
 
 </body>
